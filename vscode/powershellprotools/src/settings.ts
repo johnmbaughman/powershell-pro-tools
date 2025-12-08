@@ -18,7 +18,6 @@ export interface ISettings {
     signOnSaveCertificate: string;
     excludeAutomaticVariables: boolean;
     clearScreenAfterLoad: boolean;
-    disableNewsNotification: boolean;
     statusBar: {
         performanceVisibility: boolean;
         performanceAlignment: string;
@@ -47,7 +46,6 @@ export function load(): ISettings {
         signOnSaveCertificate: configuration.get<string>("signOnSaveCertificate", ""),
         excludeAutomaticVariables: configuration.get<boolean>("excludeAutomaticVariables", false),
         clearScreenAfterLoad: configuration.get<boolean>("clearScreenAfterLoad", true),
-        disableNewsNotification: configuration.get<boolean>("disableNewsNotification", false),
         statusBar: {
             performanceVisibility: configuration.get<boolean>("statusBar.performanceVisibility", true),
             performanceAlignment: configuration.get<string>("statusBar.performanceAlignment", "left"),
