@@ -21,7 +21,6 @@ import { HistoryTreeViewCommands } from './commands/history';
 import { SessionCommands } from './commands/sessions';
 import { JobTreeViewCommands } from './commands/jobs';
 import { PerformanceService } from './services/performanceService';
-import { NewsTreeViewCommands } from './commands/news';
 
 export class Container {
 	static initialize(context: ExtensionContext, powershellService: PowerShellService) {
@@ -41,7 +40,6 @@ export class Container {
 		this._commands.push(new HistoryTreeViewCommands());
 		this._commands.push(new SessionCommands());
 		this._commands.push(new JobTreeViewCommands());
-		this._commands.push(new NewsTreeViewCommands());
 		this.RegisterCommands();
 
 		//this._codeLensProvider = new PowerShellCodeLensProvider();
